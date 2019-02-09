@@ -1,15 +1,13 @@
 import React from 'react'
-import Logo from './assets/logo.png'
-
-import './styles.sass'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import NavBar from './components/NavBar'
 
 const App = () => (
     <React.Fragment>
-        <div className="container">
-            <img src={Logo} />
-            <span>Ola mundo React App</span>
-        </div>        
+        <CssBaseline />
+        <NavBar />        
     </React.Fragment>
+
 )
 
 export default App
