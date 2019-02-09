@@ -9,12 +9,10 @@ export default (options) => {
                 [{
                     test: /\.js$/,
                     exclude: /node_modules/,
-                    use: [
-                        'babel-loader'
-                    ],
+                    use: ['babel-loader', 'eslint-loader']
                 },
                 {
-                    test: /\.s(a|c)ss$/,
+                    test: /\.(sa|sc|c)ss$/,
                     use: [
                         options.cssStyleLoader,
                         'css-loader',
@@ -23,11 +21,7 @@ export default (options) => {
                 },
                 {
                     test: /\.(pdf|jpg|png|gif|svg|ico)$/,
-                    use: [
-                        {
-                            loader: options.fileLoader
-                        },
-                    ]
+                    use: [options.fileLoader]
                 },
             ]
         },
@@ -37,7 +31,7 @@ export default (options) => {
                 template: './public/index.html',
                 filename: './index.html'
             }),
-            new CopyWebpackPlugin([{ from: 'public/static' }])
+            new CopyWebpackPlugin([{ from: 'src/assets' }])
         ]
     }
 }

@@ -1,36 +1,15 @@
-import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import React from 'react'
+import Logo from './assets/logo.png'
 
-import Main from './components/_shared/Main'
-import Home from './components/Home'
-import Contato from './components/Contato'
+import './styles.sass'
 
-class App extends Component {
-    render() {
-        return (
-            <Main>
-                <Route exact path="/" component={Home} />
-                <Route path="/Contato" component={Contato} />                
-            </Main>
-        )
-    }
-}
-
-/*class App extends Component {
-    render() {
-        return (
-            <Router history={BrowserHistory}>
-                <Route path="/" component={Layout}>
-                    <IndexRoute component={Home} />
-                    <Route path="/about" component={AboutPage} />
-                    <Route path="/contact" component={ContactPage} />
-                    <Route path="/login" component={LoginPage} />
-                </Route>
-            </Router>
-        )
-    }
-}*/
-
-
+const App = () => (
+    <React.Fragment>
+        <div className="container">
+            <img src={Logo} />
+            <span>Ola mundo React App</span>
+        </div>        
+    </React.Fragment>
+)
 
 export default App
