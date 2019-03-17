@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "prebuild": "webpack --config webpack.prod.babel.js --progress",
+    "prebuild": "webpack --config src/config/webpack.config.prod.babel.js --progress",
     "build": "babel-node server",
-    "start": "webpack-dev-server --config webpack.dev.babel.js",
+    "start": "webpack-dev-server --config src/config/webpack.config.dev.babel.js",
     "lint": "eslint --ext .jsx --ext .js src"
   },
   "devDependencies": {
@@ -14,8 +14,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
-    "clean-webpack-plugin": "^1.0.0",
-    "copy-webpack-plugin": "^4.6.0",
+    "clean-webpack-plugin": "^1.0.0",    
     "css-loader": "^2.1.0",
     "eslint": "^5.3.0",
     "eslint-loader": "^2.1.2",
